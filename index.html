@@ -25,6 +25,7 @@ xmlhttp.onreadystatechange=function()
     }
   }
 xmlhttp.open("GET","info.txt",true);
+xmlhttp.setRequestHeader("Cache-control", "no-cache");
 xmlhttp.send();
 }
 </script>
