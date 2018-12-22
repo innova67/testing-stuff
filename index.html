@@ -26,6 +26,9 @@ xmlhttp.onreadystatechange=function()
   }
 xmlhttp.open("GET","info.txt",true);
 xmlhttp.setRequestHeader("Cache-control", "no-cache");
+xmlhttp.setRequestHeader("Cache-control", "no-store");
+
+xmlhttp.setRequestHeader("Cache-control", "max-age=100");
 xmlhttp.send();
 }
 </script>
