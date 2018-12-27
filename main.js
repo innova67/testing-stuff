@@ -42,17 +42,15 @@ function loadjson(){
 	
 	//recibir la solicitud
 	request.onload = function() {
-  var superHeroes = request.response;
-  populateHeader(superHeroes); //header simple
-  showHeroes(superHeroes); //todos los datos de dentro (eso entendi xD)
+  var superh = request.response;
 }
 	//hacer cosas con el json :v
 	var cambio = document.getElementById('myDiv');
 	var myH1 = document.createElement('h1');
-  myH1.textContent = jsonObj['name'];
+  myH1.textContent = superh['name'];
   cambio.appendChild(myH1);
 
   var myPara = document.createElement('p');
-  myPara.textContent = 'Hometown: ' + jsonObj['home'] + ' // Formed: ' + jsonObj['formed'];
+  myPara.textContent = 'Hometown: ' + superh['home'] + ' // Formed: ' + superh['formed'];
   cambio.appendChild(myPara);
 }
