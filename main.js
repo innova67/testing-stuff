@@ -51,12 +51,14 @@ function loadjson(){
 		
 	//hacer cosas con el json :v
 	var cambio = document.getElementById('myDiv');
-	var myH1 = document.createElement('h1');
+
+/*	var myH1 = document.createElement('h1');
 	myH1.textContent = superh['name'];
   	cambio.appendChild(myH1);
-
+*/
   	var myPara = document.createElement('p');
-  	myPara.textContent = 'Hometown: ' + superh['home'] + ' // Formed: ' + superh['formed'];
-  	cambio.appendChild(myPara);
+	//myPara.textContent = 'Hometown: ' + superh['home'] + ' // Formed: ' + superh['formed'];
+  	myPara.textContent = superh;
+	cambio.appendChild(myPara);
 	}
 }
