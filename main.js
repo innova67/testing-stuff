@@ -1,3 +1,6 @@
+
+document.getElementById('change').addEventListener('onclick', loadXMLDoc);
+
 function loadXMLDoc()
 {
 var xmlhttp;
