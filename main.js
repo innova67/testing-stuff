@@ -1,5 +1,5 @@
 
-document.getElementById('change').addEventListener('onclick', loadXMLDoc);
+document.getElementById('change').addEventListener('click', loadXMLDoc);
 
 function loadXMLDoc()
 {
