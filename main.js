@@ -3,6 +3,7 @@ document.getElementById('change').addEventListener('click', loadXMLDoc);
 
 function loadXMLDoc()
 {
+  console.log('hi');
 var xmlhttp;
 if (window.XMLHttpRequest)
   {// para IE7+, Firefox, Chrome, Opera, Safari
