@@ -19,11 +19,40 @@ xmlhttp.onreadystatechange=function()
     {
     document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
     }
-  }
+}
+	
 xmlhttp.open("GET","info.txt",true);
 xmlhttp.setRequestHeader("Cache-control", "no-cache");
 xmlhttp.setRequestHeader("Cache-control", "no-store");
 
 xmlhttp.setRequestHeader("Cache-control", "max-age=100");
 xmlhttp.send();
+	
+	 loadjson();
+}
+
+function loadjson(){
+	//iniciar la solicitud hxmhttp
+	var request = new XMLHttpRequest();
+	request.open('GET', 'test.json');
+	
+	//establecer detalles de la solicitud
+	request.responseType = 'json';
+	request.send();
+	
+	//recibir la solicitud
+	request.onload = function() {
+  var superHeroes = request.response;
+  populateHeader(superHeroes); //header simple
+  showHeroes(superHeroes); //todos los datos de dentro (eso entendi xD)
+}
+	//hacer cosas con el json :v
+	var cambio = document.getElementById('myDiv');
+	var myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['name'];
+  cambio.appendChild(myH1);
+
+  var myPara = document.createElement('p');
+  myPara.textContent = 'Hometown: ' + jsonObj['home'] + ' // Formed: ' + jsonObj['formed'];
+  cambio.appendChild(myPara);
 }
