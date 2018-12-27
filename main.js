@@ -43,7 +43,7 @@ function loadjson(){
 	//recibir la solicitud
 	request.onload = function() {
   var superh = request.response;
-}
+		
 	//hacer cosas con el json :v
 	var cambio = document.getElementById('myDiv');
 	var myH1 = document.createElement('h1');
@@ -53,4 +53,5 @@ function loadjson(){
   var myPara = document.createElement('p');
   myPara.textContent = 'Hometown: ' + superh['home'] + ' // Formed: ' + superh['formed'];
   cambio.appendChild(myPara);
+}
 }
