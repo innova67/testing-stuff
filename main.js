@@ -38,9 +38,9 @@ function loadjson(){
 	
 	//establecer detalles de la solicitud
 	request.responseType = 'text';
-        request.setRequestHeader("Cache-control", "no-cache");
-        request.setRequestHeader("Cache-control", "no-store");
-        request.setRequestHeader("Cache-control", "max-age=100");
+        //request.setRequestHeader("Cache-control", "no-cache");
+        //request.setRequestHeader("Cache-control", "no-store");
+        //request.setRequestHeader("Cache-control", "max-age=100");
         
 	//enviar los datos de la solicitud
         request.send();
