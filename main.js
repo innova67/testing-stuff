@@ -1,5 +1,5 @@
 
-document.getElementById('change').addEventListener('click', loadXMLDoc);
+document.getElementById('change').addEventListener('click', loadjson);
 
 function loadXMLDoc()
 {
@@ -37,21 +37,26 @@ function loadjson(){
 	request.open('GET', 'test.json');
 	
 	//establecer detalles de la solicitud
-	request.responseType = 'json';
-	request.send();
+	request.responseType = 'text';
+        request.setRequestHeader("Cache-control", "no-cache");
+        request.setRequestHeader("Cache-control", "no-store");
+        request.setRequestHeader("Cache-control", "max-age=100");
+        
+	//enviar los datos de la solicitud
+        request.send();
 	
 	//recibir la solicitud
 	request.onload = function() {
-  var superh = request.response;
+  	var superh = request.response;
 		
 	//hacer cosas con el json :v
 	var cambio = document.getElementById('myDiv');
 	var myH1 = document.createElement('h1');
-  myH1.textContent = superh['name'];
-  cambio.appendChild(myH1);
+	myH1.textContent = superh['name'];
+  	cambio.appendChild(myH1);
 
-  var myPara = document.createElement('p');
-  myPara.textContent = 'Hometown: ' + superh['home'] + ' // Formed: ' + superh['formed'];
-  cambio.appendChild(myPara);
-}
+  	var myPara = document.createElement('p');
+  	myPara.textContent = 'Hometown: ' + superh['home'] + ' // Formed: ' + superh['formed'];
+  	cambio.appendChild(myPara);
+	}
 }
