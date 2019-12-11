@@ -1,0 +1,88 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "mes:rickshaw",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "minecraft:spawn_egg": {
+        "value": true
+      }
+    },
+    "component_groups": {
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "rickshaw" ]
+      },
+      "minecraft:collision_box": {
+        "width": 3.0,
+        "height": 3.0
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {
+
+      },
+      "minecraft:push_through": {
+				"value": 1
+			},
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:behavior.float": {
+        "priority": 2
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:nameable": {
+			},
+      "minecraft:rideable": {
+        "priority": 0,
+        "seat_count": 1,
+        "crouching_skip_interact": true,
+        "family_types": [
+          "player"
+        ],
+        "interact_text": "action.interact.ride.horse",
+        "seats": {
+          "position": [ 0, 1, -1 ]
+        }
+
+      },
+      "minecraft:input_ground_controlled": {},
+      "minecraft:behavior.player_ride_tamed": {
+      },
+      "minecraft:is_saddled": {
+      },
+      "minecraft:physics": {
+      }
+    },
+
+    "events": {
+    }
+  }
+}
