@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "mes:table",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "minecraft:spawn_egg": {
+        "value": true
+      }
+    },
+    "component_groups": {
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "old_farmer" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 0.9
+      },
+      "minecraft:nameable": {
+			},
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:movement": {
+        "value": 0.0
+      },
+      "minecraft:physics": {
+        "has_gravity": true
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [ ]
+        }
+      }
+    }
+  }
+}
